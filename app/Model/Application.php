@@ -1,0 +1,9 @@
+<?php
+class Application extends AppModel
+{
+    public $hasAndBelongsToMany = array('User');
+    public $hasMany = array('Task');
+
+
+}
+?>
