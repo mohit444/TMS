@@ -83,7 +83,7 @@
 			<a class="btn btn-danger" href="/tms/users/index">Cancel</a></td></tr>
 			</table>
 			</div>
-			
+			</div>
 			
 		<?php echo $this->Form->end(); ?>
 		</div>

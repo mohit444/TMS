@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
- 
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+
  <?php 
 	if($this->Session->read('Auth.User.role') == 'PM' || $this->Session->read('Auth.User.role')== 'TL' || $this->Session->read('Auth.User.role') == 'EMM') :  
 ?>
@@ -13,7 +13,13 @@
 <!-- Filter & Assign App Button Section ...-->
 
 	<div class="row">
-		<div class="col-md-5 col-md-offset-3">
+	
+		<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
+		</div>
+	
+		<div class="col-md-5 col-md-offset-2">
 			<div class="well">
 
 				<?php echo $this->Session->flash(); ?>

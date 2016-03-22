@@ -6,15 +6,13 @@
 
   <div class="row">
 
-  <div class="row">
 
-<div style="float:left; margin-bottom:20px;">
-		
-			<a class="btn btn-default" href="/tms/tasks/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
-
-
+		<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
 		</div>
-	<div class="col-lg-6 col-lg-offset-3">
+	
+	<div class="col-lg-7 col-lg-offset-2">
 
 		
 
@@ -74,13 +72,14 @@
 			</div>
 
 			<div class="form-group">
-				<label for="inputRequest_Date3" class="col-sm-2 control-label">Time</label>
-				
-				<div class="col-sm-10">
-				
-					<?php echo $this->Form->input('time' , array('class' => 'form-control' , 'id' => 'time'  ));?>
-					
+			<label class="col-sm-2 control-label">Duration</label>
+			<div class="col-sm-10">
+				<div class="input-group bootstrap-timepicker timepicker">
+
+					<?php echo $this->Form->input('time' , array('class' => 'form-control' , 'id'=> "timepicker2" , 'type' => 'text'));?>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
 				</div>
+			</div>
 			</div>
 
 			
@@ -118,7 +117,11 @@
       dateFormat : 'yy-mm-dd',
       firstDay: 1
     });
-    $('#time').timepicker();
+   $('#timepicker2').timepicker({
+		showMeridian: false,
+		
+                
+            });
    
    
   });

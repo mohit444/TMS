@@ -6,15 +6,13 @@
 
   <div class="row">
 
-  <div class="row">
 
-<div style="float:left; margin-bottom:20px;">
-		
-			<a class="btn btn-default" href="/tms/tasks/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
-
-
+		<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
 		</div>
-	<div class="col-lg-6 col-lg-offset-3">
+	
+	<div class="col-lg-7 col-lg-offset-2">
 
 		
 
@@ -104,6 +102,7 @@
 			<a class="btn btn-danger" href="/tms/tasks/index">Cancel</a></td></tr>
 			</table>
 			</div>
+			</div>
 			
 		<?php echo $this->Form->end(); ?>
 		</div>
@@ -117,7 +116,11 @@
       dateFormat : 'yy-mm-dd',
       firstDay: 1
     });
-    $('#time').timepicker();
+   $('#timepicker2').timepicker({
+		showMeridian: false,
+		
+                
+            });
    
    
   });

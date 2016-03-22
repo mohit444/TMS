@@ -4,18 +4,15 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
  
- 
+
 
 <div class="row">
-<div style="float:left; margin-bottom:20px;">
-		
-			<a class="btn btn-default" href="/tms/applications/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
-
-
+<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
 		</div>
-	<div class="col-lg-10 col-lg-offset-1">
-
-		
+	<div class="col-lg-10 col-lg-offset-0">
+	
 
 		<h2>Add Application</h2>
 
@@ -128,13 +125,6 @@
 
 
 
-
-
-
-
-
-
-
 			<div class="form-group">
 				<label for="inputUsername3" class="col-sm-2 control-label">Commited_Date</label>
 				
@@ -166,13 +156,6 @@
 					
 				</div>
 			</div>
- 
-
-
-
-
-
-
 
 
 

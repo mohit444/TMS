@@ -7,13 +7,13 @@
  
 
 <div class="row">
-<div style="float:left; margin-bottom:20px;">
-		
-			<a class="btn btn-default" href="/tms/applications/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
-
-
+	
+		<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
 		</div>
-	<div class="col-lg-10 col-lg-offset-1">
+
+	<div class="col-lg-10 col-lg-offset-0">
 
 		
 
@@ -216,6 +216,7 @@
 				<div class="col-sm-offset-2 col-sm-10"><td>
 			<a class="btn btn-danger" href="/tms/applications/index">Cancel</a></td></tr>
 			</table>
+			</div>
 			</div>
 			
 		<?php echo $this->Form->end(); ?>

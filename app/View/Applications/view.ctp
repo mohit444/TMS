@@ -1,12 +1,13 @@
+
+
 <div class="row">
-
-<div style="float:left; margin-bottom:20px;">
-		
-			<a class="btn btn-default" href="/tms/applications/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
-
-
+	<div class="col-lg-6 col-lg-offset-0" style="margin-bottom:20px;">
+		<div style="float:left;">
+			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</a>
 		</div>
-		
+	</div>
+
 <div class="col-lg-12 ">
 
 
