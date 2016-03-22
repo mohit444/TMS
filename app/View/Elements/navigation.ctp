@@ -25,7 +25,7 @@
                  </li>
 
 		 <li>
-                    <?php echo $this->Html->link(__('Users'),array('controller'=>'users','action'=>'index'))?>
+                    <?php echo $this->Html->link(__('  Users'),array('controller'=>'users','action'=>'index') , array('class'=>"glyphicon glyphicon-user" , 'title' => 'users'))?>
                  </li>
 
 
@@ -38,7 +38,7 @@
                  </li>
                  
                  <li>
-                    <?php echo $this->Html->link(__('Logout'),array('controller'=>'users','action'=>'logout'))?>
+                    <?php echo $this->Html->link(__('  Logout'),array('controller'=>'users','action'=>'logout') , array('class'=>"glyphicon glyphicon-off" , 'title' => 'logout'))?>
                  </li>
 		 <li>
                     <?php echo $this->Html->link(__('test'),array('controller'=>'applications','action'=>'test'))?>

@@ -8,9 +8,10 @@
 
 	<div class="row">
 
-		<div style="float:left;">
-			<a class="btn btn-default" href="/tms/users/back"><span class="glyphicon glyphicon-arrow-left "></span></a>
-		</div>
+
+
+
+<!-- filter section -->
 		<div class="col-md-5 col-md-offset-3">
 			<div class="well">
 
@@ -90,7 +91,8 @@
 				<a class="btn btn-success" style=" padding: 1px 15px 3px 2px;" href="/tms/users/add"><span class="glyphicon glyphicon-plus text-success" style="padding:8px; background:#ffffff; margin-right:4px;"></span>Create</a>
 			</div>
 			
-	</div>	
+	</div>
+<!-- close filter section-->
 
 
 	<div class="col-lg-4">
@@ -103,15 +105,15 @@
 		</p>
 	</div>
 	
-
 	<div class="col-lg-12">
+	
 		<div class="table-responsive">
 		<table class="table table-striped table-bordered">
 		    <thead>
 			<tr style="background-color:;">
 			    <th>#</th>
 			    <th>Employee_Id</th>
-			    <th>Emp Name</th>
+			    <th >Emp_Name</th>
 			    <th>Email</th>
 			    <th>Department</th>
 			    <th>Role</th>
@@ -119,7 +121,7 @@
 			    <th>Mobile</th>
 			    <th><?php echo $this->Paginator->sort('created'); ?></th>
 			    <th><?php echo $this->Paginator->sort('modified', 'Modified'); ?></th>
-			    <th class="col-lg-2">Actions</th>
+			    <th>Actions</th>
 			</tr>
 		    </thead>
 
@@ -193,13 +195,11 @@
 			<div class="form-group">
 			<td>
 			
-			<label class="glyphicon glyphicon-edit" rel="tooltip" title="edit"></label>
-			<?php echo $this->HTML->link('Edit' , array('controller' => 'users' , 'action' => 'edit' , $userdata['User']['id']));?>
+			<?php echo $this->HTML->link('' , array('controller' => 'users' , 'action' => 'edit' , $userdata['User']['id'] ), array('class'=>"glyphicon glyphicon-edit" , 'title' => 'Edit'));?>
 			
-			<label class="glyphicon glyphicon-trash" rel="tooltip" title="delete"></label>
-			<?php echo $this->Form->postLink('Delete' , 
-			array('class' => 'form-control' , 'controller' => 'users' , 'action' => 'delete' , $userdata['User']['id']) , array('confirm' => 'Are you sure you want to delete this user')); ?>
-			
+			<?php echo $this->Form->postLink('' , 
+			array('class' => 'form-control' , 'controller' => 'users' , 'action' => 'delete' , $userdata['User']['id'])  ,  array('confirm' => 'Are you sure you want to delete this user' , 'class' => "glyphicon glyphicon-trash" ,'rel'=> "tooltip", 'title'=>"Delete")); ?>
+			</div>
 			</td>
 			</div>
 

@@ -1,4 +1,12 @@
 <div class="row">
+
+
+<div style="float:left; margin-bottom:20px;">
+		
+			<a class="btn btn-default" href="/tms/users/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
+
+
+		</div>
 	<div class="col-lg-6 col-lg-offset-3">
 
 		

@@ -234,8 +234,6 @@
       dateFormat: "yy-mm-dd",
       firstDay: 1
     });
-    $( "#" ).accordion({
-  icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
-});
+   
   });
   </script>

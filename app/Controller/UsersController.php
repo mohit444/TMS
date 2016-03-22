@@ -194,7 +194,7 @@ class UsersController extends AppController{
     }
 
     public function back(){
-        $this->redirect($this->referer());
+         $this->referer();
     }
 
 

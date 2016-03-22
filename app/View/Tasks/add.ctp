@@ -11,6 +11,14 @@
   
 
   <div class="row">
+  <div class="row">
+
+<div style="float:left; margin-bottom:20px;">
+		
+			<a class="btn btn-default" href="/tms/tasks/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
+
+
+		</div>
 	<div class="col-lg-6 col-lg-offset-3">
 
 		
@@ -65,8 +73,8 @@
 				<label for="inputPassword3" class="col-sm-2 control-label">Circle</label>
 				<div class="col-sm-10">
 					<?php echo $this->Form->input('circle', array(
-						'options' => array('Unknown' => '-Select-' , 'IDEA' => 'IDEA' , 'Reliance' => 'Reliance' , 'Mts' => 'Mts' , 'Aircel' => 'Aircel' , 'Vodafone' => 'Vodafone' , 'Telenor' => 'Telenor' , 
-						'Airtel' => 'Airtel') , 'class'=>'form-control', 'id' => 'circle' ));?>
+						'options' => array('Unknown' => '-Select Any One-' , 'Delhi' => 'Delhi' , 'Noida' => 'Noida' , 'Mumbai' => 'Mumbai' , 'Bangalore' => 'Bangalore' , 'Chennai' => 'Chennai' , 'Pune' => 'Pune' , 
+						'Gurgaon' => 'Gurgaon') , 'class'=>'form-control', 'id' => 'circle' ));?>
 				</div>
 			</div>
 

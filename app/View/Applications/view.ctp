@@ -1,5 +1,16 @@
+<div class="row">
+
+<div style="float:left; margin-bottom:20px;">
+		
+			<a class="btn btn-default" href="/tms/applications/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
+
+
+		</div>
+		
 <div class="col-lg-12 ">
-					<table class="table table-bordered">
+
+
+					<table class="table table-striped table-bordered">
 					    <thead>
 					    <?php foreach($singleapp as $single) : ?>
 						<tr>
@@ -86,4 +97,5 @@
 					</table>
 		
 					
+			</div>
 			</div>

@@ -159,8 +159,8 @@
 						       ?>
 							 
 						    </td>
-						<td><?php echo $this->HTML->link('Edit' , array('controller' => 'tasks' , 'action' => 'edit' , $task['Task']['id']));?> 
-						<?php echo $this->Form->postLink('Delete' , array('controller' => 'tasks' , 'action' => 'delete' , $task['Task']['id']) , array('confirm' => 'Are you sure you want to delete this task')); ?></td>
+						<td><?php echo $this->HTML->link('' , array('controller' => 'tasks' , 'action' => 'edit' , $task['Task']['id']) , array('class'=>"glyphicon glyphicon-edit" , 'title' => 'Edit'));?> 
+						<?php echo $this->Form->postLink('' , array('controller' => 'tasks' , 'action' => 'delete' , $task['Task']['id']) , array('confirm' => 'Are you sure you want to delete this task' , 'class'=>"glyphicon glyphicon-trash" , 'title' => 'Delete')); ?></td>
 
 						</tr>
 

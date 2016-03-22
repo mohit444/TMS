@@ -3,7 +3,7 @@
 
 <div class="row">
 <div style="float:left;">
-			<a class="btn btn-default" href="/tms/users/back"><span class="glyphicon glyphicon-arrow-left "></span></a>
+			<a class="btn btn-default" href="/tms/users/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
 		</div>
 	<div class="col-lg-7 col-lg-offset-3">
 
