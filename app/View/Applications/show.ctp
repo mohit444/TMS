@@ -117,7 +117,7 @@
 				</div>
 
 				  <div class="col-lg-12 ">
-					<table class="table table-bordered">
+					<table class="table table-striped table-bordered">
 					    <thead>
 						<tr>
 						    <th>#</th>
