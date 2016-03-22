@@ -198,9 +198,10 @@
 							 
 						    </td>
 						<td>
-						<?php echo $this->HTML->link('View' , array('controller' => 'applications' , 'action' => 'view' , $data['Application']['id']));?>
-						<?php echo $this->HTML->link('Edit' , array('controller' => 'applications' , 'action' => 'edit' , $data['Application']['id']));?> 
-						<?php echo $this->Form->postLink('Delete' , array('controller' => 'applications' , 'action' => 'delete' , $data['Application']['id']) , array('confirm' => 'Are you sure you want to delete this user')); ?></td>
+						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'view' , $data['Application']['id']) , array('class'=>"glyphicon glyphicon-eye-open" , 'title' => 'View'));?>
+						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'edit' , $data['Application']['id']) , array('class'=>"glyphicon glyphicon-edit" , 'title' => 'Edit'));?> 
+						<?php echo $this->Form->postLink('' , array('controller' => 'applications' , 'action' => 'delete' , $data['Application']['id']) , array('confirm' => 'Are you sure you want to delete this user' , 'class' => "glyphicon glyphicon-trash" ,'rel'=> "tooltip", 'title'=>"Delete")); ?></td>
+
 
 						</tr>
 

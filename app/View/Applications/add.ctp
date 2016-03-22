@@ -7,6 +7,12 @@
  
 
 <div class="row">
+<div style="float:left; margin-bottom:20px;">
+		
+			<a class="btn btn-default" href="/tms/applications/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
+
+
+		</div>
 	<div class="col-lg-10 col-lg-offset-1">
 
 		
@@ -199,12 +205,25 @@
 					<?php echo $this->Form->input('comment',array('class'=>'form-control', 'id' => 'comment'));?>
 				</div>
 			</div>
-
+			
 			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-					<?php echo $this->Form->submit('Create',array('class'=>'btn btn-primary'))?>
+			
+				<div class="col-sm-offset-2 col-sm-10"><table>
+			<tr><td>
+					<?php echo $this->Form->submit('Create',array('class'=>'btn btn-primary'));?>
+					 </td>
 				</div>
+				<div class="col-sm-offset-2 col-sm-10"><td>
+			<a class="btn btn-danger" href="/tms/applications/index">Cancel</a></td></tr>
+			</table>
+			</div>
+				
                         </div>
+			
+			
+				
+                       
+			
 			
 		<?php echo $this->Form->end(); ?>
 		</div>

@@ -73,10 +73,17 @@
 			</div>
 
 			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-					<?php echo $this->Form->submit('Edit',array('class'=>'btn btn-primary'))?>
+			
+				<div class="col-sm-offset-2 col-sm-10"><table>
+			<tr><td>
+					<?php echo $this->Form->submit('Update',array('class'=>'btn btn-primary'));?>
+					 </td>
 				</div>
-                        </div>
+				<div class="col-sm-offset-2 col-sm-10"><td>
+			<a class="btn btn-danger" href="/tms/users/index">Cancel</a></td></tr>
+			</table>
+			</div>
+			</div>
 			
 		<?php echo $this->Form->end(); ?>
 		</div>

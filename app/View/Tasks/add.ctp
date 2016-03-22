@@ -11,14 +11,12 @@
   
 
   <div class="row">
-  <div class="row">
 
-<div style="float:left; margin-bottom:20px;">
+	<div style="float:left; margin-bottom:20px;">
 		
-			<a class="btn btn-default" href="/tms/tasks/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
+		<a class="btn btn-default" href="/tms/tasks/index"><span class="glyphicon glyphicon-arrow-left "></span></a>
 
-
-		</div>
+	</div>
 	<div class="col-lg-6 col-lg-offset-3">
 
 		
@@ -79,35 +77,19 @@
 			</div>
 
 
+		
 
-			<!--div class="form-group">
-				<label for="inputRequest_Date3" class="col-sm-2 control-label">Time</label>
-				
-				<div class="col-sm-10">
-				
-					<?php echo $this->Form->input('time' , array('class' => 'form-control' ,'id' => 'time'  ));?>
-					
+
+			<div class="form-group">
+			<label class="col-sm-2 control-label">Duration</label>
+			<div class="col-sm-10">
+				<div class="input-group bootstrap-timepicker timepicker">
+
+					<?php echo $this->Form->input('time' , array('class' => 'form-control' , 'id'=> "timepicker2" , 'type' => 'text'));?>
+					<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
 				</div>
-			</div-->
-
-
-
-
-
-
-			
-
-
-<div class="form-group">
-<label class="col-sm-2 control-label">Duration</label>
-<div class="col-sm-10">
-<div class="input-group bootstrap-timepicker timepicker">
-
-<?php echo $this->Form->input('time' , array('class' => 'form-control' , 'id'=> "timepicker2" , 'type' => 'text'));?>
-<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-</div>
-</div>
-</div>
+			</div>
+			</div>
 
 
 
@@ -123,10 +105,16 @@
 			</div>
 
 			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
-					<?php echo $this->Form->submit('Save',array('class'=>'btn btn-primary'))?>
+			
+				<div class="col-sm-offset-2 col-sm-10"><table>
+			<tr><td>
+					<?php echo $this->Form->submit('Save',array('class'=>'btn btn-primary'));?>
+					 </td>
 				</div>
-                        </div>
+				<div class="col-sm-offset-2 col-sm-10"><td>
+			<a class="btn btn-danger" href="/tms/tasks/index">Cancel</a></td></tr>
+			</table>
+			</div></div>
 			
 		<?php echo $this->Form->end(); ?>
 		</div>

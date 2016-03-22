@@ -1,2 +1,0 @@
-$(document).ready(function () {$("#submit-934826222").bind("click", function (event) {$.ajax({data:$("#submit-934826222").closest("form").serialize(), type:"post", url:"\/tms\/users\/add"});
-return false;});});
