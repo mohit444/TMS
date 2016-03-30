@@ -8,8 +8,8 @@
 
 <div class="row">
 <div style="float:left;">
-			<a class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
-			</span>Back</a>
+			<button class="btn btn-primary" style=" padding: 1px 15px 3px 2px;" onClick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left text-primary" style="padding:8px; background:#ffffff; margin-right:4px;">
+			</span>Back</button>
 		</div>
 	<div class="col-lg-10 col-lg-offset-0">
 	

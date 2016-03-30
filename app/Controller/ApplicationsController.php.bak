@@ -80,7 +80,7 @@ class ApplicationsController extends AppController{
 										'table' => 'applications',
 										#'alias' => 'Application',
 										'type' => 'inner',
-											
+											'fields' => array('DISTINCT Application.id'),
 										'conditions' => array('Application.name' => $this->request->data['Application']['name'])
 									)
 						),

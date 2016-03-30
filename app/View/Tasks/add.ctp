@@ -18,7 +18,7 @@
 			</span>Back</a>
 		</div>
 	
-	<div class="col-lg-7 col-lg-offset-2">
+	<div class="col-lg-9 col-lg-offset-1">
 
 		
 
@@ -82,7 +82,7 @@
 
 
 			<div class="form-group">
-			<label class="col-sm-2 control-label">Duration</label>
+			<label class="col-sm-2 control-label">Duration(HH:MM)</label>
 			<div class="col-sm-10">
 				<div class="input-group bootstrap-timepicker timepicker">
 

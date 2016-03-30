@@ -2,9 +2,11 @@
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 class User extends AppModel{
 
-    public $actsAs = array('Tree' => 'nested');
+    public $actsAs = array('Tree' => 'nested' , 'Containable');
     public $hasAndBelongsToMany = array('Application');
-    public $hasMany = array('Task');
+    public $hasMany = array(
+		'Task',
+		'ApplicationsUser');
     public $displayField = 'username';
 
 

@@ -56,7 +56,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</footer>
 		
 	</div>
-	<!--?php echo $this->element('sql_dump')?-->
+	<?php echo $this->element('sql_dump')?>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

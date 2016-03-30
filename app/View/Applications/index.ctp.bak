@@ -15,7 +15,7 @@
 	
 	
 
-		<div class="col-md-5 col-md-offset-2">
+		<div class="col-md-5 col-md-offset-3">
 		
 			<div class="well">
 
@@ -218,7 +218,7 @@
 						<td>
 						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'view' , $data['Application']['id']) , array('class'=>"glyphicon glyphicon-eye-open" , 'title' => 'View'));?>
 						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'edit' , $data['Application']['id']) , array('class'=>"glyphicon glyphicon-edit" , 'title' => 'Edit'));?> 
-						<?php echo $this->Form->postLink('' , array('controller' => 'applications' , 'action' => 'delete' , $data['Application']['id']) , array('confirm' => 'Are you sure you want to delete this user' , 'class' => "glyphicon glyphicon-trash" ,'rel'=> "tooltip", 'title'=>"Delete")); ?></td>
+						<?php echo $this->Form->postLink('' , array('controller' => 'applications' , 'action' => 'delete' , $data['Application']['id']) , array('confirm' => 'Are you sure you want to delete this user' , 'class' => "glyphicon glyphicon-trash" ,'rel'=> "tooltip", 'title'=>"Delete")); --></td>
 
 						</tr>
 

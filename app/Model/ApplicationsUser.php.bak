@@ -1,6 +1,6 @@
 <?php
 class ApplicationsUser extends AppModel{
-    public $belongsTo = array('User','Application');
+    public $belongsTo = array('User','Application' , 'Task');
 	public $actsAs = array('Containable');
 
     /*public function beforefind($queryData = array()){

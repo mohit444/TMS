@@ -25,12 +25,12 @@
                  </li>
 
 		 <li>
-                    <?php echo $this->Html->link(__(' Users'),array('controller'=>'users','action'=>'index') , array('class'=>"glyphicon glyphicon-user" , 'title' => 'users'))?>
+                    <?php echo $this->Html->link(__('Users'),array('controller'=>'users','action'=>'index') , array('class'=>"" , 'title' => 'users'))?>
                  </li>
 
 
 		 <li>
-                    <?php echo $this->Html->link(__('Applications'),array('controller'=>'applications','action'=>'index'))?>
+                    <?php echo $this->Html->link(__('Applications'),array('controller'=>'applications','action'=>'test'))?>
                  </li>
 
 		 <li>
@@ -38,7 +38,7 @@
                  </li>
                  
                  <li>
-                    <?php echo $this->Html->link(__(' Logout'),array('controller'=>'users','action'=>'logout') , array('class'=>"glyphicon glyphicon-off" , 'title' => 'logout'))?>
+                    <?php echo $this->Html->link(__('Logout'),array('controller'=>'users','action'=>'logout') , array('class'=>"" , 'title' => 'Logout'))?>
                  </li>
 		 <li>
                     <?php echo $this->Html->link(__('test'),array('controller'=>'applications','action'=>'test'))?>

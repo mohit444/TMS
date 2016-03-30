@@ -145,15 +145,15 @@
 						    
 						  
 						       <td>
-						       <?php
-							echo $this->Time->timeAgoInWords($task['Task']['created']);
+						       <?php echo $task['Task']['created'];
+							#echo $this->Time->timeAgoInWords($task['Task']['created']);
 						       
 						       ?>
 							 
 						    </td>
 						    <td>
-						       <?php
-							echo $this->Time->timeAgoInWords($task['Task']['modified']);
+						       <?php echo $task['Task']['modified'];
+							#echo $this->Time->timeAgoInWords($task['Task']['modified']);
 							
 						       
 						       ?>
