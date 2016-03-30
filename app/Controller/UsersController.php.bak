@@ -8,9 +8,9 @@ class UsersController extends AppController{
     public $helpers = array('Js');
     public $components = array('Flash' , 'Session', 'Paginator' , 'RequestHandler');
 
-   public $paginate = array(
+  /* public $paginate = array(
         'limit' => 1
-    );
+    );*/
 
     public function hierarchy(){
         $result = $this->User->children($this->Auth->user('id'));
@@ -154,7 +154,7 @@ class UsersController extends AppController{
             if($this->User->save($this->request->data)){
 
                 $this->Flash->success('user has been created ');
-                $this->redirect("index");
+                $this->redirect("/tmsusers/index");
             }
 
         }

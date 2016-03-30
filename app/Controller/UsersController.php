@@ -154,7 +154,7 @@ class UsersController extends AppController{
             if($this->User->save($this->request->data)){
 
                 $this->Flash->success('user has been created ');
-                $this->redirect("index");
+                $this->redirect("/tms/users/index");
             }
 
         }

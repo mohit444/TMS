@@ -82,7 +82,7 @@
 			<div class="form-group">
 				<label for="inputParent_id3" class="col-sm-2 control-label">Assigned_by</label>
 				<div class="col-sm-10">
-					<?php echo $this->Form->input('parent_id' , array('type' => 'select' , 'options' => $option , 'class'=>'form-control', 'id' => 'parent_id' , 'empty' => 'Select Option'));?>
+					<?php echo $this->Form->input('parent_id' , array('type' => 'select' , 'options' => $option , 'class'=>'form-control', 'id' => 'parent_id' ));?>
 				</div>
 			</div>
 
