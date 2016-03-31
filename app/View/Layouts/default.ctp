@@ -36,7 +36,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 	<style>
 		body{
-			padding-top:70px;
+			padding-top:90px;
 		}
 	</style>
 	
@@ -56,7 +56,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</footer>
 		
 	</div>
-	<?php echo $this->element('sql_dump')?>
+	<!--?php echo $this->element('sql_dump')?-->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -64,8 +64,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php 
 		echo $this->Html->script("jquery");
 		echo $this->Html->script("jqueryui/jquery-ui");
-		echo $this->Html->script('bootstrap.min'); 
+		
 		echo $this->Html->script("bootstrap-timepicker.min.js");
+		echo $this->Html->script('bootstrap.min'); 
 		echo $this->Html->script("jquery.min.js");
 	?>
 </body>

@@ -40,16 +40,7 @@ class AppController extends Controller {
                     'passwordHasher' => 'Blowfish'
                 )
             ),
-            'authorize' => array('Controller'),
-
-            'loginRedirect' => array(
-                'controller' => 'users',
-                'action' => 'index'
-            ),
-            'logoutRedirect' => array(
-                'controller' => 'users',
-                'action' => 'login'
-            )
+            'authorize' => array('Controller')
 
         )
 

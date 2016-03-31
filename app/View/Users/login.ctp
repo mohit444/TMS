@@ -1,30 +1,32 @@
-<div class="row">
-          <div class="col-lg-6 col-lg-offset-3">
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <?php echo $this->Session->flash(); ?>
+                        <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
 
-                <h2>Login</h2>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                    <?php echo $this->Form->input('username',array('class'=>'form-control' , 'placeholder'=>"Username" , 'autofocus'=>'autofocus'));?>
+                                </div></div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                    <?php echo $this->Form->input('password',array('class'=>'form-control' , 'placeholder'=>"Password"));?>
+                                </div></div>
 
-                <div class="well">
-                     <?php echo $this->Session->flash(); ?>
-                    <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
-                          <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
-                            <div class="col-sm-10">
-                              <?php echo $this->Form->input('username',array('class'=>'form-control'));?>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                               <?php echo $this->Form->input('password',array('class'=>'form-control'));?>
-                            </div>
-                          </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <?php echo $this->Form->submit('Login',array('class'=>'btn btn-success btn-block'))?>
 
-                          <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
-                            </div>
-                          </div>
-                    <?php echo $this->Form->end();?>
+                        <?php echo $this->Form->end();?>
+                    </div>
                 </div>
-          </div>
-</div>
+            </div>
+        </div>
+    </div>
+
+
+
