@@ -54,11 +54,9 @@ class TasksController extends AppController{
             }
         }
 
-        $app = $this->Task->Application->find('list' , array('fields' => array('id' , 'name')));
-        #$app = $this->Task->ApplicationsUser->find('list' , array('fields' => array('id' , 'application_id')));
-        $this->set('app' , $app);
-        #echo '<pre>';
-       #print_r($app);
+        #$app = $this->Task->Application->find('list' , array('fields' => array('id' , 'name')));
+        #$this->set('app' , $app);
+
 
 
     }

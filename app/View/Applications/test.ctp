@@ -148,7 +148,11 @@
 							
 							foreach ($testdata as $data): 
 							
-							$i = 0; 
+							$i = 0;
+							$j = 0;
+
+                            while(isset($data[$j])) :
+
 									
 							?>
 						<tr>
@@ -156,15 +160,15 @@
 				
 						
 						    <td><?php echo ++$count ;?></td>
-						    <td><?php echo $data['Application']['name']; ?></td>
-						     <td><?php echo $data['Application']['app_type']; ?></td> 
+						    <td><?php echo $data[$j]['Application']['name']; ?></td>
+						     <td><?php echo $data[$j]['Application']['app_type']; ?></td>
 
 						   
 
 							
 								<?php foreach($assign as $ass) :
 								
-									if($data['Application']['id'] == $ass['applications']['id']) : ?>
+									if($data[$j]['Application']['id'] == $ass['applications']['id']) : ?>
 
 									<td><?php echo $ass['users']['username']; ?></td>
 								
@@ -175,12 +179,12 @@
 							
 						     
 
-						     <td><?php echo $data['Application']['commited_date']; ?></td>
+						     <td><?php echo $data[$j]['Application']['commited_date']; ?></td>
 						  
 						       <td>
 						       
 
-						       <?php echo $data['Application']['created'];
+						       <?php echo $data[$j]['Application']['created'];
 							/*echo $this->Time->timeAgoInWords($data['Application']['created']);
 							echo '&nbsp;<small>by</small>&nbsp;';
 							echo '&nbsp;';
@@ -191,7 +195,7 @@
 							 
 						    </td>
 						    <td>
-						       <?php echo $data['Application']['modified'];
+						       <?php echo $data[$j]['Application']['modified'];
 							/*echo $this->Time->timeAgoInWords($data['Application']['modified']);
 							echo '&nbsp;<small>by</small>&nbsp;';
 							echo '&nbsp;';
@@ -201,7 +205,7 @@
 							 
 						    </td>
 						<td>
-						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'view' , $data['Application']['id']) , array('class'=>"glyphicon glyphicon-eye-open" , 'title' => 'View'));?>
+						<?php echo $this->HTML->link('' , array('controller' => 'applications' , 'action' => 'view' , $data[$j]['Application']['id']) , array('class'=>"glyphicon glyphicon-eye-open" , 'title' => 'View'));?>
 						</td>
 
 						</tr>
@@ -209,8 +213,9 @@
 
 						<?php 
 						
-								
-						
+						$j = $j + 1;
+
+               			endwhile;
 						
 						endforeach;?>
 					    </tbody>

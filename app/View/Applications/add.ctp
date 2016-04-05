@@ -19,6 +19,7 @@
 		<div class="well">
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->Form->create('Application' , array('class' => 'form-horizontal' , 'inputDefaults' => array('label' => false))); ?>
+			
 			<div class="form-group">
 				<label for="inputEmpid3" class="col-sm-2 control-label">App_Name</label>
 				<div class="col-sm-10">
@@ -98,9 +99,6 @@
 
 
 
-
-
-
 			<div class="form-group">
 				<label for="inputMobile3" class="col-sm-2 control-label">Requested_By</label>
 				<div class="col-sm-10">
@@ -116,6 +114,7 @@
 						'Roll Back' => 'Roll Back') , 'class'=>'form-control', 'id' => 'current_status' ));?>
 				</div>
 			</div>
+			
 			<div class="form-group">
 				<label for="inputParent_id3" class="col-sm-2 control-label">Assign_To</label>
 				<div class="col-sm-10">

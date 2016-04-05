@@ -2,7 +2,6 @@
 class ApplicationsController extends AppController{
     public $components = array('Flash' , 'Session' , 'Paginator');
 
-
     public function beforeFilter(){
         parent::beforeFilter();
     }
@@ -63,8 +62,10 @@ class ApplicationsController extends AppController{
 		
 		$assign = $this->Application->User->query("SELECT users.id, users.username,applications.id,applications.name FROM `users`,`applications` WHERE `users`.id=`applications`.assigned_by;");
         $this->set('assign', $assign);
-		
-		
+
+		#echo '<pre>';
+        #print_r($assign1);
+        #echo '</pre>';
 		if(!empty($this->request->data)){
 			$conditions=array();
 			
@@ -128,9 +129,15 @@ class ApplicationsController extends AppController{
 			
 		}
 		else{
-			$testdata = $this->Paginator->paginate('ApplicationsUser' , array('ApplicationsUser.user_id' => $user_id));
-			$this->set('testdata' , $testdata);
-			#echo "<pre>";
+            $testdata=array('OR'=>array());
+			$testdata[] = am($this->Paginator->paginate('ApplicationsUser' , array('ApplicationsUser.user_id' => $user_id)),
+                $this->Paginator->paginate('Application' , array('Application.assigned_by' => $user_id)));
+
+
+
+            $this->set('testdata' , $testdata);
+
+           ## echo "<pre>";
 			#print_r($testdata);
             #echo "</pre>";
 		}
@@ -138,19 +145,22 @@ class ApplicationsController extends AppController{
 	}
 
 
-
-
-
-
-
-
-
-
     public function add(){
+        $this->loadModel('Assignment');
         if($this->request->is('post')){
             $this->Application->Create();
-            $this->request->data['Application']['assigned_by']= $this->Auth->user('id');
-            if($this->Application->save($this->request->data)){
+             $this->request->data['Application']['assigned_by']= $this->Auth->user('id');
+
+            if($savedata = $this->Application->save($this->request->data)){
+              #echo '<pre>';
+                #print_r($savedata);
+               # echo '</pre>';
+
+                $this->request->data['Assignment']['user_id']=implode("," , $this->data['User']['User']);
+                $this->request->data['Assignment']['application_id']=$this->Application->id;
+                $this->request->data['Assignment']['assigned_by']=$this->Auth->user('id');
+                $this->Assignment->save($this->request->data);
+
                 $this->Flash->success('Application created');
                 $this->redirect('index');
             }
@@ -225,7 +235,9 @@ class ApplicationsController extends AppController{
                 $this->Paginator->settings = $this->paginate;
                 $dataapp = $this->Paginator->paginate('Application');
                 $this->set('dataapp' ,$dataapp);
-
+#echo '<pre>';
+ #               print_r($dataapp);
+  #              echo '</pre>';
                 /*while(isset($dataapp[$i])){
 
                     $assignedname[]=$this->Application->User->find('list' , array('fields' => array('id' , 'username') , 'conditions' => array('User.id' => $dataapp[$i]['Application']['assigned_by'])));
@@ -345,6 +357,23 @@ $testdata = $this->Application->ApplicationsUser->find('all', array(
 
 	
 	 }
+
+    public function t1(){
+        $user_id = (int)$this->Auth->user('id');
+        $assign = $this->Application->User->query("SELECT users.id, users.username,applications.id,applications.name FROM `users`,`applications` WHERE `users`.id=`applications`.assigned_by;");
+        $this->set('assign', $assign);
+
+        #$assign = $this->Application->query("SELECT applications.id,applications.name FROM `applications`
+        #                                      WHERE `applications`.assigned_by=$user_id;");
+        $t1 = $this->Application->find('all' , array('conditions' =>array('Application.assigned_by' => $user_id)));
+        $t2 = $this->Application->ApplicationsUser->find('all' , array('conditions' =>array('Applicationsuser.user_id' => $user_id)));
+        $this->set('t1', $t1);
+        $this->set('t2', $t2);
+        #echo '<pre>';
+        #print_r($assign);
+        #print_r($t2);
+        #echo '</pre>';
+    }
 
 
 

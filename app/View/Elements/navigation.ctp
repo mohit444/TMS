@@ -41,7 +41,7 @@
                     <?php echo $this->Html->link(__('Logout'),array('controller'=>'users','action'=>'logout') , array('class'=>"" , 'title' => 'Logout'))?>
                  </li>
 		 <li>
-                    <?php echo $this->Html->link(__('test'),array('controller'=>'applications','action'=>'test'))?>
+                    <?php echo $this->Html->link(__('test'),array('controller'=>'applications','action'=>'t1'))?>
                  </li>
               </ul>
             </li>
