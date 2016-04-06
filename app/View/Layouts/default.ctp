@@ -27,7 +27,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('base.css' , 'bootstrap.min.css' , 'icon.css' , 'bootstrap-timepicker.min.css' , 'dataTables.bootstrap.min','dataTables'));
+		echo $this->Html->css(array('base.css' , 'bootstrap.min.css' , 'icon.css' , 'bootstrap-timepicker.min.css' , 'dataTables.bootstrap.min','dataTables' , 'metisMenu.min'));
 		echo $this->Js->writeBuffer(array('cache' => TRUE));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -79,6 +79,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script("jquery.dataTables");
 		echo $this->Html->script("dataTables.bootstrap.min");
 		echo $this->Html->script("sb-admin-2");
+		echo $this->Html->script("metisMenu.min");
 
 	?>
 

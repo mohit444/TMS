@@ -8,6 +8,7 @@ class Application extends AppModel
 		'ApplicationsUser' 
 	);
 	public $actsAs = array('Containable');
+
 	
 
 

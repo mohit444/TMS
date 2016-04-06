@@ -60,8 +60,8 @@ class ApplicationsController extends AppController{
 	public function test(){
 		$user_id = (int)$this->Auth->user('id');
 		
-		$assign = $this->Application->User->query("SELECT users.id, users.username,applications.id,applications.name FROM `users`,`applications` WHERE `users`.id=`applications`.assigned_by;");
-        $this->set('assign', $assign);
+		#$assign = $this->Application->User->query("SELECT users.id, users.username,applications.id,applications.name FROM `users`,`applications` WHERE `users`.id=`applications`.assigned_by;");
+       # $this->set('assign', $assign);
 
 		#echo '<pre>';
         #print_r($assign1);
@@ -89,11 +89,6 @@ class ApplicationsController extends AppController{
 							
 				));
 
-
-		
-				
-			
-			
 			}
 
 
@@ -129,17 +124,25 @@ class ApplicationsController extends AppController{
 			
 		}
 		else{
-            $testdata=array('OR'=>array());
-			$testdata[] = am($this->Paginator->paginate('ApplicationsUser' , array('ApplicationsUser.user_id' => $user_id)),
-                $this->Paginator->paginate('Application' , array('Application.assigned_by' => $user_id)));
+            $this->loadModel('Assignment');
+            $user = $this->Auth->user('id');
+            $this->Paginator->settings = $this->paginate;
+            $testdata = $this->Assignment->query("SELECT applications.*,assignments.*,users.username FROM `applications` INNER JOIN `assignments`
+                                                  ON FIND_IN_SET('".$user."',assignments.user_id) OR (`assignments`.assigned_by = ".$user." AND applications.assigned_by= ".$user.")
+                                                  JOIN `users` ON `users`.id = ".$user);
 
 
+            #$assignTo = explode("," ,FIND_IN_SET('$user',assignments.user_id) );
 
+              #$assign = $this->Application->User->query("SELECT users.id, users.username,applications.id,applications.name FROM `users`,`applications` WHERE `users`.id=`applications`.assigned_by;");
+           # ." FIND_IN_SET('".$user."',assignments.user_id)"
+            #JOIN `users` ON `users`.id = ".$user
             $this->set('testdata' , $testdata);
 
-           ## echo "<pre>";
-			#print_r($testdata);
-            #echo "</pre>";
+            echo "<pre>";
+			print_r($testdata);
+            #print_r($assignTo);
+            echo "</pre>";
 		}
 		
 	}
@@ -371,6 +374,7 @@ $testdata = $this->Application->ApplicationsUser->find('all', array(
         $this->set('t2', $t2);
         #echo '<pre>';
         #print_r($assign);
+       # print_r($t1);
         #print_r($t2);
         #echo '</pre>';
     }

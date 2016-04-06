@@ -27,7 +27,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('base.css' , 'bootstrap.min.css' , 'icon.css' , 'bootstrap-timepicker.min.css' , 'dataTables'));
+		echo $this->Html->css(array('base.css' , 'bootstrap.min.css' , 'icon.css' , 'bootstrap-timepicker.min.css' , 'dataTables.bootstrap.min','dataTables' , 'metisMenu.min'));
 		echo $this->Js->writeBuffer(array('cache' => TRUE));
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
